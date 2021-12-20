@@ -1,0 +1,152 @@
+@mixin flexbox {
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin justify-content($value: flex-start) {
+  @if $value == flex-start {
+       -ms-flex-pack: start;
+  } @else if $value == flex-end {
+       -ms-flex-pack: end;
+  } @else if $value == space-between {
+       -ms-flex-pack: justify;
+  } @else if $value == space-around {
+       -ms-flex-pack: distribute;
+  } @else {
+       -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+          justify-content: $value;
+}
+@mixin align-items($value: stretch) {
+  @if $value == flex-start {
+       -ms-flex-align: start;
+  } @else if $value == flex-end {
+       -ms-flex-align: end;
+  } @else {
+       -ms-flex-align: $value;
+  }
+  -webkit-align-items: $value;
+          align-items: $value;
+}
+@mixin flex-direction($direction: row) {
+  @if $direction == row-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+       -moz-box-direction: reverse;
+       -moz-box-orient: horizontal;
+  } @else if $direction == column {
+    -webkit-box-direction: normal;
+     -webkit-box-orient: vertical;
+       -moz-box-direction: normal;
+        -moz-box-orient: vertical;
+  } @else if $direction == column-reverse {
+    -webkit-box-direction: reverse;
+      -webkit-box-orient: vertical;
+       -moz-box-direction: reverse;
+         -moz-box-orient: vertical;
+  } @else {
+     -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+        -moz-box-direction: normal;
+       -moz-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $direction;
+      -ms-flex-direction: $direction;
+          flex-direction: $direction;
+}
+@mixin flex-basis($value: auto) {
+  -webkit-flex-basis: $value;
+          flex-basis: $value;
+}
+
+
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+// generic transform
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin placeholder-color($color){
+  &.placeholder{
+    color: $color
+  }
+  &:-moz-placeholder{
+    color: $color
+  }  
+  &::-webkit-input-placeholder{
+    color: $color
+  }
+  &:-ms-input-placeholder{
+    color: $color
+  }
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+
