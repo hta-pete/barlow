@@ -143,7 +143,7 @@ HEADER
 		font-size:15px;
 		font-weight:600;
 		color:white;
-		margin: 0 0 0 40px;
+		margin: 0 0 0 30px;
 		padding-bottom:3px;
 		@include transition(color 0.8s $easeOutExpo);
 		&.active{
@@ -191,7 +191,7 @@ FOOTER
 		font-size:15px;
 		font-weight:600;
 		color:$primary;
-		margin: 0 35px 0 0;
+		margin: 0 20px 0 0;
 		padding-bottom:3px;
 		@include transition(color 0.8s $easeOutExpo);
 		&:last-child{

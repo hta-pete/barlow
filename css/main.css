@@ -219,7 +219,7 @@ strong {
 /* ––––––––––––––––––––––––––––––––––––––––––––
 CONTAINERS
 –––––––––––––––––––––––––––––––––––––––––––– */
-[class^="container--"], [class*=" container--"] {
+[class^=container--], [class*=" container--"] {
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -323,7 +323,7 @@ GRID
   margin-right: 0;
 }
 
-[class^="col--"], [class*=" col--"] {
+[class^=col--], [class*=" col--"] {
   position: relative;
 }
 
@@ -625,7 +625,7 @@ HEADER
   font-size: 15px;
   font-weight: 600;
   color: white;
-  margin: 0 0 0 40px;
+  margin: 0 0 0 30px;
   padding-bottom: 3px;
   -webkit-transition: color 0.8s cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition: color 0.8s cubic-bezier(0.19, 1, 0.22, 1);
@@ -678,7 +678,7 @@ FOOTER
   font-size: 15px;
   font-weight: 600;
   color: #111;
-  margin: 0 35px 0 0;
+  margin: 0 20px 0 0;
   padding-bottom: 3px;
   -webkit-transition: color 0.8s cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition: color 0.8s cubic-bezier(0.19, 1, 0.22, 1);
@@ -708,7 +708,7 @@ FOOTER
 .hero {
   position: relative;
   width: 100%;
-  height: calc(100vw * (9/16));
+  height: 56.25vw;
   max-height: 60vh;
   min-height: 600px;
 }
