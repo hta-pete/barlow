@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/* ––––––––––––––––––––––––––––––––––
+RESET
+–––––––––––––––––––––––––––––––––––*/
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ol, ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+}
+textarea {
+  white-space: revert;
+}
+
+/* ––––––––––––––––––––––––––––––––––
+COLORS
+–––––––––––––––––––––––––––––––––––*/
+:root {
+  --primary: #111;
+  --white: #fff;
+  --red: #d02030;
+}
+.clr--white{
+  color: var(--white);
+}
+.clr--red{
+  color: var(--red);
+}
+
+body {
+  color: var(--primary);
+}
+
+/* ––––––––––––––––––––––––––––––––––
+TYPE
+–––––––––––––––––––––––––––––––––––*/
+html {
+  font-size: 62.5%;
+  font-family: "Barlow", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+:root {
+  --fs-base: 1.5rem;
+}
+body {
+  font-size: var(--fs-base);
+  font-weight:500;
+  line-height:1.25;
+}
+p, li, ol {
+  
+}
+h1, h2, h3, h4, h5, h6 {
+  
+}
+
+.heading--1{
+  font-family:"Barlow Semi Condensed";
+  font-size:6.5rem;
+  letter-spacing:-0.025em;
+  font-weight:bold;
+  line-height:0.8;
+}
+.heading--2{
+  font-family:"Barlow Semi Condensed";
+  font-size:4rem;
+  letter-spacing:-0.025em;
+  font-weight:bold;
+  line-height:0.8;
+}
+
+.sub-heading--1{
+  display:inline-block;
+  font-size:1.3rem;
+  font-weight:600;
+  text-transform: uppercase;
+}
+.sub-heading--2{
+  display:inline-block;
+  font-size:1.3rem;
+  font-weight:600;
+  text-transform: uppercase;
+}
+
+.display--1{
+  font-size:2.2rem;
+  letter-spacing:-0.025em;
+  font-weight:700;
+}
+
+@media screen and (min-width: 48em) {
+  .sub-heading--1{
+    display:inline-block;
+    font-size:1.8rem;
+    font-weight:600;
+    text-transform: uppercase;
+  }
+  .sub-heading--2{
+    display:inline-block;
+    font-size:1.5rem;
+    font-weight:600;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .heading--1{
+    font-size:8.5rem;
+  }
+  .heading--2{
+    font-size:5.5rem;
+  }
+  .sub-heading--1{
+    display:inline-block;
+    font-size:1.8rem;
+    font-weight:600;
+    text-transform: uppercase;
+  }
+  .sub-heading--2{
+    display:inline-block;
+    font-size:1.5rem;
+    font-weight:600;
+    text-transform: uppercase;
+  }
+  .display--1{
+    font-size:3rem;
+    letter-spacing:-0.025em;
+    font-weight:700;
+  }
+}
+
+strong{
+  font-weight:700;
+}
+
+
+/* ————————————————————–––––––
+PADDING
+————————————————————––––––– */
+.mb--1{
+  margin-bottom:1em;
+}
+.mb--2{
+  margin-bottom:1em;
+}
+.mb--3{
+  margin-bottom:2em;
+}
+/* ————————————————————–––––––
+Container
+————————————————————––––––– */
+.container {
+  width: min(100%, 1380px);
+  margin: 0 auto;
+  padding:0 20px;
+}
+.container--sm {
+  width: min(100%, 960px);
+  margin: 0 auto;
+  padding:0 20px;
+}
+@media screen and (min-width: 48em) {
+  .container, .container--sm {
+    padding:0 60px;
+  }
+}
+
+/* ————————————————————–––––––
+Flex
+————————————————————––––––– */
+:root {
+  --gap:30px;
+}
+
+@media screen and (min-width: 48em) {
+  :root {
+    --gap:60px;
+  }
+}
+
+[class^=flex], [class*=flex] {
+  display: flex;
+}
+
+.flex--all {
+  justify-content: center;
+  align-items: center;
+}
+.flex--vertical {
+  align-items: center;
+}
+.flex--horizontal {
+  justify-content: center;
+}
+.flex--between {
+  justify-content: space-between;
+}
+.flex--end {
+  justify-content: flex-end;
+}
+.flex--reverse {
+  flex-direction: row-reverse;
+}
+
+.flex--has-gap {
+  gap: var(--gap);
+}
+
+[class^=flex-row], [class*=flex-row] {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 48em) {
+  [class^=flex-row], [class*=flex-row] {
+    flex-direction: row;
+  }
+}
+
+.flex-row > * {
+  flex-basis: 100%;
+}
+.flex-row--2 > * {
+  flex-basis: 50%;
+}
+.flex-row--3 > * {
+  flex-basis: 33.333333%;
+}
+.flex-row--4 > * {
+  flex-basis: 25%;
+}
+.flex-row--5 > * {
+  flex-basis: 20%;
+}
+
+/* ————————————————————–––––––
+Image size
+————————————————————––––––– */
+.img--full img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img--fit img, .img--fit video {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vid--full video {
+  width: 100%;
+  height: auto;
+}
+
+.vid--fit video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=bones.scss.map */
