@@ -11,6 +11,16 @@ $(function(){
     }
     
   });
+
+  $('.page-slider .slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    prevArrow: $('.slider-prev'),
+    nextArrow: $('.slider-next')
+  });
+
     
 });
 
