@@ -6,8 +6,10 @@ $(function(){
 
     if( $(this).hasClass("open") ){
       $(".header_nav").fadeIn("fast");
+      $('body, html').css({ overflow:"hidden" });
     } else{
       $(".header_nav").fadeOut("fast");
+      $('body, html').css({ overflow:"scroll" });
     }
     
   });
@@ -20,8 +22,7 @@ $(function(){
     prevArrow: $('.slider-prev'),
     nextArrow: $('.slider-next')
   });
-
-    
+ 
 });
 
 

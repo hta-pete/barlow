@@ -21,8 +21,9 @@ header{
     width:100%;
     height:calc(100vh - 90px);
     padding:30px 20px;
-    background:#52667b url("../images/mobile-nav-hero.jpg") no-repeat bottom center;
+    background:#52667b url("../img/mobile-nav-hero.jpg") no-repeat bottom center;
     background-size:100% auto;
+    overflow:scroll;
     li{
       display:block;
       margin-bottom:20px;
