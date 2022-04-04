@@ -505,6 +505,10 @@ header .header_nav a:hover {
 }
 
 @media screen and (min-width: 48em) {
+  body, html {
+    overflow: scroll !important;
+  }
+
   header {
     padding: 0 60px;
   }
