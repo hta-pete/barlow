@@ -41,7 +41,7 @@
 }
 @media screen and (min-width: 48em) {
   .page-hero{
-    min-height:480px;
+    min-height:340px;
     max-height:768px;
   }
   .page-hero_text{
@@ -477,7 +477,7 @@
   }
 }
 .page-contact_map{
-  height:450px;
+  height:300px;
   background:var(--red) url("../img/contact-map.jpg") no-repeat center;
   background-size:cover;
   .map-pin{
@@ -498,6 +498,9 @@
       padding-left:30px;
       margin-top:0;
     }
+  }
+  .page-contact_map{
+    height:450px;
   }
 }
 

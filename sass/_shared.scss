@@ -30,12 +30,20 @@ header{
       &:last-child{
         margin-right:0;
       }
+      &.active{
+        a{
+          text-decoration:underline;
+        }
+      }
     }
     a{
       font-size:2rem;
       font-weight:600;
       text-transform:uppercase;
       color:white;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -154,11 +162,20 @@ footer{
       &:last-child{
         margin-right:0;
       }
+      &.active{
+        a{
+          color:var(--red);
+          text-decoration: underline;
+        }
+      }
     }
     a{
       font-size:1.3rem;
       font-weight:600;
       text-transform:uppercase;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
   .copyright{

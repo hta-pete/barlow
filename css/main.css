@@ -79,7 +79,7 @@ p {
 
 .heading--1 {
   font-family: "Barlow Semi Condensed";
-  font-size: 6.5rem;
+  font-size: 5.5rem;
   letter-spacing: -0.025em;
   font-weight: bold;
   line-height: 0.8;
@@ -446,11 +446,17 @@ header .header_nav li {
 header .header_nav li:last-child {
   margin-right: 0;
 }
+header .header_nav li.active a {
+  text-decoration: underline;
+}
 header .header_nav a {
   font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   color: white;
+}
+header .header_nav a:hover {
+  text-decoration: underline;
 }
 
 .nav-btn {
@@ -573,10 +579,17 @@ footer .footer_nav li {
 footer .footer_nav li:last-child {
   margin-right: 0;
 }
+footer .footer_nav li.active a {
+  color: var(--red);
+  text-decoration: underline;
+}
 footer .footer_nav a {
   font-size: 1.3rem;
   font-weight: 600;
   text-transform: uppercase;
+}
+footer .footer_nav a:hover {
+  text-decoration: underline;
 }
 footer .copyright {
   font-size: 1.4rem;
@@ -732,7 +745,7 @@ footer .copyright {
 
 @media screen and (min-width: 48em) {
   .page-hero {
-    min-height: 480px;
+    min-height: 340px;
     max-height: 768px;
   }
 
@@ -1176,7 +1189,7 @@ footer .copyright {
 }
 
 .page-contact_map {
-  height: 450px;
+  height: 300px;
   background: var(--red) url("../img/contact-map.jpg") no-repeat center;
   background-size: cover;
 }
@@ -1197,6 +1210,10 @@ footer .copyright {
   .page-contact_info .page-contact_info-right {
     padding-left: 30px;
     margin-top: 0;
+  }
+
+  .page-contact_map {
+    height: 450px;
   }
 }
 
