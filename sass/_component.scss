@@ -353,17 +353,21 @@
 }
 
 
+.page-about{
+  padding:0 0px;
+}
 .page-about_inner{
-  padding:120px 0 30px 0;
-  background:white;
+  padding-top:60px;
+  padding-bottom:60px;
+  background:transparent;
 }
 .page-about_continued{
-  padding:0 0 120px 0;
-  background:white;
+  margin-top:30px;
 }
 .page-about_left{
   padding:30px;
   margin-top:20px;
+  margin-bottom:30px;
   background:var(--red);
   .flex--has-gap{
     gap:30px;
@@ -373,7 +377,7 @@
   }
 }
 .page-about_right{
-  padding-left:30px;
+  padding-left:0;
 }
 .page-about_team-member{
   img{
@@ -388,7 +392,7 @@
   }
 }
 .page-about_link{
-  margin-top:60px;
+  margin-top:30px;
   h4{
     max-width:250px;
   }
@@ -401,6 +405,102 @@
 }
 .page-about_values{
   position:relative;
-  padding:120px 0;
+  padding:60px 0;
   background:var(--red);
+  h2{
+    margin-bottom:30px;
+  }
 }
+
+@media screen and (min-width: 48em) {
+  .page-about{
+    padding:0 60px;
+  }
+  .page-about_inner{
+    padding-top:120px;
+    padding-bottom:120px;
+    background:white;
+  }
+  .page-about_continued{
+    margin-top:30px;
+  }
+  .page-about_left{
+    padding:30px;
+    margin-top:20px;
+    margin-bottom:0;
+  }
+  .page-about_right{
+    padding-left:30px;
+  }
+  .page-about_link{
+    margin-top:60px;
+    h4{
+      max-width:250px;
+    }
+    a{
+      margin-top:15px;
+      img{
+        margin-left:15px;
+      }
+    }
+  }
+  .page-about_values{
+    padding:120px 0;
+    h2{
+      margin-bottom:0;
+    }
+  }
+}
+
+.page-contact_info{
+  padding:60px 0;
+  .contact-group{
+    margin-top:30px;
+    font-size:1.7rem;
+    &:first-child{
+      margin-top:0;
+    }
+    h2{
+      margin-bottom:5px;
+    }
+    a{
+      text-decoration: underline;
+    }
+    li strong{
+      display:inline-block;
+      width:100px;
+    }
+  }
+  .page-contact_info-right{
+    padding-left:0;
+    margin-top:30px;
+  }
+}
+.page-contact_map{
+  height:450px;
+  background:var(--red) url("../img/contact-map.jpg") no-repeat center;
+  background-size:cover;
+  .map-pin{
+    text-align:center;
+    a{
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .page-contact_info{
+    padding:120px 0;
+    .contact-group{
+      font-size:1.7rem;
+    }
+    .page-contact_info-right{
+      padding-left:30px;
+      margin-top:0;
+    }
+  }
+}
+
+
+
+

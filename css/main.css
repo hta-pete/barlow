@@ -236,11 +236,11 @@ strong {
   }
 }
 .large-bullets {
-  margin-left: 30px;
+  margin-left: 0;
 }
 .large-bullets li {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: -0.025em;
   margin-top: 15px;
@@ -260,6 +260,14 @@ strong {
   background: white;
 }
 
+@media screen and (min-width: 48em) {
+  .large-bullets {
+    margin-left: 30px;
+  }
+  .large-bullets li {
+    font-size: 2rem;
+  }
+}
 /* ————————————————————–––––––
 PADDING
 ————————————————————––––––– */
@@ -1033,19 +1041,24 @@ footer .copyright {
     padding: 120px 60px;
   }
 }
+.page-about {
+  padding: 0 0px;
+}
+
 .page-about_inner {
-  padding: 120px 0 30px 0;
-  background: white;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: transparent;
 }
 
 .page-about_continued {
-  padding: 0 0 120px 0;
-  background: white;
+  margin-top: 30px;
 }
 
 .page-about_left {
   padding: 30px;
   margin-top: 20px;
+  margin-bottom: 30px;
   background: var(--red);
 }
 .page-about_left .flex--has-gap {
@@ -1056,7 +1069,7 @@ footer .copyright {
 }
 
 .page-about_right {
-  padding-left: 30px;
+  padding-left: 0;
 }
 
 .page-about_team-member img {
@@ -1071,7 +1084,7 @@ footer .copyright {
 }
 
 .page-about_link {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .page-about_link h4 {
   max-width: 250px;
@@ -1085,8 +1098,106 @@ footer .copyright {
 
 .page-about_values {
   position: relative;
-  padding: 120px 0;
+  padding: 60px 0;
   background: var(--red);
+}
+.page-about_values h2 {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 48em) {
+  .page-about {
+    padding: 0 60px;
+  }
+
+  .page-about_inner {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: white;
+  }
+
+  .page-about_continued {
+    margin-top: 30px;
+  }
+
+  .page-about_left {
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .page-about_right {
+    padding-left: 30px;
+  }
+
+  .page-about_link {
+    margin-top: 60px;
+  }
+  .page-about_link h4 {
+    max-width: 250px;
+  }
+  .page-about_link a {
+    margin-top: 15px;
+  }
+  .page-about_link a img {
+    margin-left: 15px;
+  }
+
+  .page-about_values {
+    padding: 120px 0;
+  }
+  .page-about_values h2 {
+    margin-bottom: 0;
+  }
+}
+.page-contact_info {
+  padding: 60px 0;
+}
+.page-contact_info .contact-group {
+  margin-top: 30px;
+  font-size: 1.7rem;
+}
+.page-contact_info .contact-group:first-child {
+  margin-top: 0;
+}
+.page-contact_info .contact-group h2 {
+  margin-bottom: 5px;
+}
+.page-contact_info .contact-group a {
+  text-decoration: underline;
+}
+.page-contact_info .contact-group li strong {
+  display: inline-block;
+  width: 100px;
+}
+.page-contact_info .page-contact_info-right {
+  padding-left: 0;
+  margin-top: 30px;
+}
+
+.page-contact_map {
+  height: 450px;
+  background: var(--red) url("../img/contact-map.jpg") no-repeat center;
+  background-size: cover;
+}
+.page-contact_map .map-pin {
+  text-align: center;
+}
+.page-contact_map .map-pin a {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 48em) {
+  .page-contact_info {
+    padding: 120px 0;
+  }
+  .page-contact_info .contact-group {
+    font-size: 1.7rem;
+  }
+  .page-contact_info .page-contact_info-right {
+    padding-left: 30px;
+    margin-top: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
